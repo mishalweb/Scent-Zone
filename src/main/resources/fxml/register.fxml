@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scentzone.controller.RegisterController" styleClass="auth-root">
+    <left>
+        <VBox prefWidth="510" spacing="22" alignment="CENTER_LEFT" styleClass="hero-panel">
+            <Label text="S  Z" styleClass="hero-monogram" />
+            <Label text="SCENT ZONE" styleClass="hero-title" />
+            <Label text="THE ART OF FRAGRANCE" styleClass="eyebrow" />
+            <Separator styleClass="gold-divider" />
+            <Label text="Find the fragrance&#10;that feels like you." wrapText="true" styleClass="hero-headline" />
+            <Label text="Explore fresh, woody, floral, and gourmand signatures in one elegant destination." wrapText="true" styleClass="muted-large" />
+            <Region prefHeight="22" />
+            <Label text="EXCLUSIVE SCENTS  •  EXCEPTIONAL EXPERIENCE" styleClass="tiny-caps" />
+        </VBox>
+    </left>
+    <center>
+        <StackPane styleClass="auth-right">
+            <VBox spacing="11" alignment="CENTER_LEFT" maxWidth="390" styleClass="auth-card">
+                <Label text="JOIN THE COLLECTION" styleClass="eyebrow" />
+                <Label text="Create your account" styleClass="page-heading" />
+                <Label text="Customer registration" styleClass="muted" />
+                <Region prefHeight="8" />
+                <Label text="FULL NAME" styleClass="field-label" />
+                <TextField fx:id="nameField" promptText="Your full name" styleClass="text-input" />
+                <Label text="EMAIL ADDRESS" styleClass="field-label" />
+                <TextField fx:id="emailField" promptText="your@email.com" styleClass="text-input" />
+                <Label text="PASSWORD" styleClass="field-label" />
+                <PasswordField fx:id="passwordField" promptText="At least 8 characters" styleClass="text-input" />
+                <Label text="CONFIRM PASSWORD" styleClass="field-label" />
+                <PasswordField fx:id="confirmField" promptText="Repeat your password" onAction="#register" styleClass="text-input" />
+                <Label fx:id="messageLabel" wrapText="true" styleClass="error-text" />
+                <Button text="CREATE ACCOUNT" onAction="#register" maxWidth="Infinity" styleClass="gold-button" />
+                <Hyperlink text="Already registered? Sign in" onAction="#back" styleClass="gold-link" />
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

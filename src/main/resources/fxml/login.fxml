@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scentzone.controller.LoginController" styleClass="auth-root">
+    <left>
+        <VBox prefWidth="510" spacing="22" alignment="CENTER_LEFT" styleClass="hero-panel">
+            <Label text="S  Z" styleClass="hero-monogram" />
+            <Label text="SCENT ZONE" styleClass="hero-title" />
+            <Label text="THE ART OF FRAGRANCE" styleClass="eyebrow" />
+            <Separator styleClass="gold-divider" />
+            <Label text="A signature scent.&#10;A lasting impression." wrapText="true" styleClass="hero-headline" />
+            <Label text="Discover remarkable fragrances, manage your collection, and explore the world of fine perfumery." wrapText="true" styleClass="muted-large" />
+            <Region prefHeight="22" />
+            <Label text="PREMIUM FRAGRANCE  •  CURATED COLLECTIONS" styleClass="tiny-caps" />
+        </VBox>
+    </left>
+    <center>
+        <StackPane styleClass="auth-right">
+            <VBox spacing="17" alignment="CENTER_LEFT" maxWidth="390" styleClass="auth-card">
+                <Label text="WELCOME BACK" styleClass="eyebrow" />
+                <Label text="Sign in to Scent Zone" styleClass="page-heading" />
+                <Label text="Access your fragrance world." styleClass="muted" />
+                <Region prefHeight="10" />
+                <Label text="EMAIL ADDRESS" styleClass="field-label" />
+                <TextField fx:id="emailField" promptText="your@email.com" onAction="#login" styleClass="text-input" />
+                <Label text="PASSWORD" styleClass="field-label" />
+                <PasswordField fx:id="passwordField" promptText="Enter your password" onAction="#login" styleClass="text-input" />
+                <Label fx:id="messageLabel" wrapText="true" styleClass="error-text" />
+                <Button text="SIGN IN" onAction="#login" maxWidth="Infinity" styleClass="gold-button" />
+                <HBox alignment="CENTER" spacing="5">
+                    <Label text="New to Scent Zone?" styleClass="muted" />
+                    <Hyperlink text="Create an account" onAction="#register" styleClass="gold-link" />
+                </HBox>
+                <Region prefHeight="8" />
+                <Label text="ADMIN + CUSTOMER PORTAL" styleClass="tiny-caps" />
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

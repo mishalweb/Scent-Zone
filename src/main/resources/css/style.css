@@ -1,0 +1,115 @@
+/* SCENT ZONE • Midnight & Champagne gold visual language */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #0d0e12;
+    -fx-accent: #cfaa60;
+    -fx-focus-color: #cfaa60;
+    -fx-faint-focus-color: transparent;
+}
+.label { -fx-text-fill: #ebe8e1; }
+.auth-root, .dashboard-root { -fx-background-color: #0d0e12; }
+.hero-panel {
+    -fx-padding: 80 65 80 65;
+    -fx-background-color: linear-gradient(to bottom right, #28231b, #111216 65%, #15130e);
+    -fx-border-color: #483924;
+    -fx-border-width: 0 1 0 0;
+}
+.hero-monogram { -fx-font-size: 21px; -fx-font-weight: bold; -fx-text-fill: #f4db9f; -fx-background-color: #463821; -fx-padding: 16 15; -fx-background-radius: 12; }
+.hero-title { -fx-font-size: 41px; -fx-font-weight: 800; -fx-text-fill: #dfbf79; }
+.hero-headline { -fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #f8f3e9; }
+.hero-panel .separator .line { -fx-border-color: #a88a4f; -fx-border-width: 1 0 0 0; }
+.gold-divider { -fx-max-width: 170; }
+.auth-right { -fx-padding: 48; }
+.auth-card { -fx-padding: 22; }
+.eyebrow { -fx-font-size: 10.5px; -fx-font-weight: bold; -fx-text-fill: #d6b36a; }
+.tiny-caps { -fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #8e8a80; }
+.page-heading { -fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #f8f2e9; }
+.section-heading { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #f8f2e9; }
+.muted { -fx-text-fill: #aaa7a0; -fx-font-size: 12.5px; }
+.muted-large { -fx-text-fill: #b9b5ac; -fx-font-size: 14px; -fx-line-spacing: 5; }
+.tiny-muted { -fx-text-fill: #898781; -fx-font-size: 10.5px; }
+.field-label { -fx-text-fill: #c0b8a9; -fx-font-weight: bold; -fx-font-size: 10px; }
+.error-text { -fx-text-fill: #f19c9a; -fx-font-size: 12px; }
+.gold-subtext { -fx-text-fill: #cfaa60; -fx-font-size: 13px; }
+.text-field, .password-field, .text-area, .combo-box {
+    -fx-background-color: #24252a;
+    -fx-text-fill: #f7f0e5;
+    -fx-prompt-text-fill: #83817e;
+    -fx-border-color: #44413c;
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
+    -fx-padding: 9 11;
+}
+.text-field:focused, .password-field:focused, .text-area:focused, .combo-box:focused { -fx-border-color: #cdaa66; }
+.text-area .content { -fx-background-color: #24252a; }
+.combo-box .list-cell { -fx-text-fill: #eee8df; -fx-background-color: #24252a; }
+.combo-box-popup .list-view { -fx-background-color: #26262b; -fx-border-color: #5b4b32; }
+.combo-box-popup .list-cell:hover { -fx-background-color: #554427; }
+.combo-box .arrow { -fx-background-color: #d5b56f; }
+.button, .hyperlink { -fx-cursor: hand; }
+.gold-button {
+    -fx-padding: 12 20;
+    -fx-background-color: linear-gradient(to right, #b68d48, #ebcf8d);
+    -fx-background-radius: 7;
+    -fx-text-fill: #181612;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+.gold-button:hover { -fx-background-color: #f3d895; }
+.dark-button {
+    -fx-padding: 10 17;
+    -fx-background-color: #2b2b2d;
+    -fx-background-radius: 7;
+    -fx-border-color: #47413a;
+    -fx-border-radius: 7;
+    -fx-text-fill: #e4d6bd;
+}
+.dark-button:hover { -fx-background-color: #41403d; }
+.outline-button {
+    -fx-padding: 10 16;
+    -fx-background-color: transparent;
+    -fx-border-color: #9d7d46;
+    -fx-border-radius: 7;
+    -fx-text-fill: #d9b774;
+}
+.outline-button:hover { -fx-background-color: #362c21; }
+.gold-link { -fx-text-fill: #e1bf7e; -fx-border-color: transparent; }
+.gold-link:hover { -fx-text-fill: #f6dda8; }
+.top-bar { -fx-background-color: #16171c; -fx-padding: 18 30; -fx-border-color: #38332a; -fx-border-width: 0 0 1 0; }
+.logo-text { -fx-text-fill: #dfbb71; -fx-font-size: 20px; -fx-font-weight: bold; }
+.status-bar { -fx-padding: 11 28; -fx-background-color: #16171c; -fx-border-color: #393228; -fx-border-width: 1 0 0 0; }
+.content-panel { -fx-padding: 27; -fx-background-color: #0d0e12; }
+.clear-scroll { -fx-background-color: #0d0e12; -fx-background: #0d0e12; -fx-border-color: transparent; }
+.clear-scroll > .viewport { -fx-background-color: #0d0e12; }
+.app-tabs { -fx-background-color: #0d0e12; -fx-tab-min-height: 42; }
+.app-tabs > .tab-header-area > .tab-header-background { -fx-background-color: #17171b; }
+.app-tabs .tab { -fx-background-color: transparent; -fx-padding: 5 20; }
+.app-tabs .tab .tab-label { -fx-text-fill: #a7a29a; -fx-font-weight: bold; -fx-font-size: 11px; }
+.app-tabs .tab:selected { -fx-background-color: #29251e; -fx-border-color: #d1a960; -fx-border-width: 0 0 2 0; }
+.app-tabs .tab:selected .tab-label { -fx-text-fill: #efcf8a; }
+.app-tabs > .tab-content-area { -fx-background-color: #0d0e12; }
+.metric-card, .feature-card, .editor-card, .cart-card {
+    -fx-background-color: #1a1b20;
+    -fx-border-color: #38342e;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 23;
+}
+.metric-card { -fx-min-width: 160; }
+.feature-card { -fx-padding: 30; }
+.metric-value { -fx-text-fill: #f5f0e7; -fx-font-size: 35px; -fx-font-weight: bold; }
+.metric-value-small { -fx-text-fill: #f5f0e7; -fx-font-size: 24px; -fx-font-weight: bold; }
+.total-text { -fx-text-fill: #f1cb7d; -fx-font-weight: bold; -fx-font-size: 23px; }
+.dark-table { -fx-background-color: #1a1b20; -fx-border-color: #353330; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 3; }
+.dark-table .column-header-background { -fx-background-color: #25262b; }
+.dark-table .column-header, .dark-table .filler { -fx-background-color: #25262b; -fx-border-color: transparent; -fx-size: 39; }
+.dark-table .column-header .label { -fx-text-fill: #cdb178; -fx-font-weight: bold; -fx-font-size: 10px; }
+.dark-table .table-row-cell { -fx-background-color: #1b1c21; -fx-border-color: #292a2f; -fx-table-cell-border-color: transparent; }
+.dark-table .table-row-cell:odd { -fx-background-color: #222329; }
+.dark-table .table-row-cell:selected { -fx-background-color: #65502e; }
+.dark-table .table-cell { -fx-text-fill: #ebe8e2; -fx-padding: 10 7; }
+.dark-table .placeholder .label { -fx-text-fill: #817d75; }
+.dark-table .virtual-flow .scroll-bar { -fx-background-color: #1a1b20; }
+.dark-table .virtual-flow .scroll-bar .thumb { -fx-background-color: #574933; }
+.separator .line { -fx-border-color: #484036; }

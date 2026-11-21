@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scentzone.controller.CustomerController" styleClass="dashboard-root">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="top-bar">
+            <VBox spacing="3">
+                <Label text="S C E N T   Z O N E" styleClass="logo-text" />
+                <Label text="YOUR SIGNATURE STARTS HERE" styleClass="tiny-caps" />
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="welcomeLabel" text="Welcome" styleClass="muted" />
+            <Button text="↻  Refresh" onAction="#refresh" styleClass="dark-button" />
+            <Button text="Log out" onAction="#logout" styleClass="outline-button" />
+        </HBox>
+    </top>
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE" styleClass="app-tabs">
+            <tabs>
+                <Tab text="SHOP FRAGRANCES">
+                    <HBox spacing="18" styleClass="content-panel">
+                        <VBox spacing="14" HBox.hgrow="ALWAYS">
+                            <Label text="The fragrance collection" styleClass="page-heading" />
+                            <Label text="Find the scent that stays with you." styleClass="muted" />
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <TextField fx:id="searchField" promptText="Search scent, brand or category..." HBox.hgrow="ALWAYS" />
+                                <ComboBox fx:id="brandFilter" promptText="All brands" prefWidth="175" />
+                            </HBox>
+                            <Label fx:id="catalogCountLabel" text="0 fragrances" styleClass="eyebrow" />
+                            <TableView fx:id="perfumeTable" VBox.vgrow="ALWAYS" styleClass="dark-table">
+                                <columns>
+                                    <TableColumn fx:id="pNameCol" text="FRAGRANCE" prefWidth="178" />
+                                    <TableColumn fx:id="pBrandCol" text="BRAND" prefWidth="115" />
+                                    <TableColumn fx:id="pCategoryCol" text="CATEGORY" prefWidth="145" />
+                                    <TableColumn fx:id="pSizeCol" text="SIZE" prefWidth="62" />
+                                    <TableColumn fx:id="pPriceCol" text="PRICE" prefWidth="115" />
+                                    <TableColumn fx:id="pStockCol" text="STOCK" prefWidth="62" />
+                                </columns>
+                            </TableView>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="QUANTITY" styleClass="field-label" />
+                                <TextField fx:id="quantityField" prefWidth="75" />
+                                <Button text="+  ADD TO CART" onAction="#addToCart" styleClass="gold-button" />
+                            </HBox>
+                        </VBox>
+                        <VBox prefWidth="350" spacing="12" styleClass="cart-card">
+                            <Label text="YOUR BAG" styleClass="eyebrow" />
+                            <Label text="Curated just for you" styleClass="section-heading" />
+                            <Label text="Your selected fragrances" styleClass="muted" />
+                            <TableView fx:id="cartTable" VBox.vgrow="ALWAYS" styleClass="dark-table">
+                                <columns>
+                                    <TableColumn fx:id="cNameCol" text="PERFUME" prefWidth="150" />
+                                    <TableColumn fx:id="cQuantityCol" text="QTY" prefWidth="46" />
+                                    <TableColumn fx:id="cPriceCol" text="SUBTOTAL" prefWidth="120" />
+                                </columns>
+                            </TableView>
+                            <HBox spacing="10">
+                                <Button text="Remove selected" onAction="#removeFromCart" styleClass="outline-button" />
+                                <Button text="Clear" onAction="#clearCart" styleClass="dark-button" />
+                            </HBox>
+                            <Separator />
+                            <HBox alignment="CENTER_LEFT">
+                                <Label text="ESTIMATED TOTAL" styleClass="eyebrow" />
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Label fx:id="cartTotalLabel" text="৳ 0.00" styleClass="total-text" />
+                            </HBox>
+                            <Button text="PLACE ORDER" onAction="#checkout" maxWidth="Infinity" styleClass="gold-button" />
+                            <Label text="Stock and final prices are checked when your order is placed. No online payment is processed." wrapText="true" styleClass="tiny-muted" />
+                        </VBox>
+                    </HBox>
+                </Tab>
+                <Tab text="MY ORDERS">
+                    <VBox spacing="15" styleClass="content-panel">
+                        <Label text="Your order history" styleClass="page-heading" />
+                        <Label text="Keep track of your fragrance orders and their status." styleClass="muted" />
+                        <TableView fx:id="orderTable" VBox.vgrow="ALWAYS" styleClass="dark-table">
+                            <columns>
+                                <TableColumn fx:id="oIdCol" text="ORDER" prefWidth="120" />
+                                <TableColumn fx:id="oDateCol" text="DATE" prefWidth="180" />
+                                <TableColumn fx:id="oItemsCol" text="ITEMS" prefWidth="120" />
+                                <TableColumn fx:id="oTotalCol" text="TOTAL" prefWidth="220" />
+                                <TableColumn fx:id="oStatusCol" text="STATUS" prefWidth="190" />
+                            </columns>
+                        </TableView>
+                        <Button text="View order items" onAction="#viewOrder" styleClass="dark-button" />
+                    </VBox>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+    <bottom>
+        <HBox styleClass="status-bar">
+            <Label fx:id="statusLabel" text="Welcome to Scent Zone." styleClass="muted" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="SCENT ZONE  ·  CUSTOMER" styleClass="tiny-caps" />
+        </HBox>
+    </bottom>
+</BorderPane>
